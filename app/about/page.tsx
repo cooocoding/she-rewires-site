@@ -31,10 +31,10 @@ Today, we empower super individuals and collaborate with mission-driven organiza
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-purple-600 to-purple-800 text-white py-16">
+      <section className="bg-gray-800 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">{t.title}</h1>
-          <p className="text-xl max-w-3xl mx-auto opacity-90">
+          <p className="text-xl max-w-3xl mx-auto text-gray-300">
             {language === "en"
               ? "From Ladies Who Tech to She Rewires - Our Journey of Empowerment"
               : "从 Ladies Who Tech 到她原力 - 我们的赋能之旅"}
@@ -47,24 +47,24 @@ Today, we empower super individuals and collaborate with mission-driven organiza
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
-              <div className="text-gray-700 text-lg leading-relaxed whitespace-pre-line">{t.content}</div>
+              <div className="text-gray-600 text-lg leading-relaxed whitespace-pre-line">{t.content}</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Values */}
-      <section className="py-16 bg-purple-50">
+      <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
             {language === "en" ? "Our Values" : "我们的价值观"}
           </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card className="text-center border-purple-200">
+            <Card className="text-center border-gray-200 bg-white">
               <CardContent className="p-8">
-                <Users className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-4">{language === "en" ? "Inclusivity" : "包容性"}</h3>
-                <p className="text-gray-700">
+                <Users className="w-12 h-12 text-lime mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">{language === "en" ? "Inclusivity" : "包容性"}</h3>
+                <p className="text-gray-600">
                   {language === "en"
                     ? "Creating spaces where all women feel welcome and valued in STEAM fields."
                     : "创造让所有女性在 STEAM 领域都感到受欢迎和被重视的空间。"}
@@ -72,11 +72,11 @@ Today, we empower super individuals and collaborate with mission-driven organiza
               </CardContent>
             </Card>
 
-            <Card className="text-center border-purple-200">
+            <Card className="text-center border-gray-200 bg-white">
               <CardContent className="p-8">
-                <Globe className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-4">{language === "en" ? "Innovation" : "创新"}</h3>
-                <p className="text-gray-700">
+                <Globe className="w-12 h-12 text-purple-500 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">{language === "en" ? "Innovation" : "创新"}</h3>
+                <p className="text-gray-600">
                   {language === "en"
                     ? "Fostering creative thinking and breakthrough solutions in technology."
                     : "培养创造性思维和技术突破性解决方案。"}
@@ -84,11 +84,11 @@ Today, we empower super individuals and collaborate with mission-driven organiza
               </CardContent>
             </Card>
 
-            <Card className="text-center border-purple-200">
+            <Card className="text-center border-gray-200 bg-white">
               <CardContent className="p-8">
-                <Heart className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-4">{language === "en" ? "Community" : "社区"}</h3>
-                <p className="text-gray-700">
+                <Heart className="w-12 h-12 text-purple-100 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">{language === "en" ? "Community" : "社区"}</h3>
+                <p className="text-gray-600">
                   {language === "en"
                     ? "Building strong networks of support and collaboration among women."
                     : "在女性之间建立强大的支持和协作网络。"}

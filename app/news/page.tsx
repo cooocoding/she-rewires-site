@@ -81,10 +81,10 @@ export default function NewsPage() {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-purple-600 to-purple-800 text-white py-16">
+      <section className="bg-gray-800 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">{t("news.title")}</h1>
-          <p className="text-xl max-w-3xl mx-auto opacity-90">
+          <p className="text-xl max-w-3xl mx-auto text-gray-300">
             {language === "en"
               ? "Stay updated with the latest news and developments from our community"
               : "了解我们社区的最新新闻和发展动态"}
@@ -97,8 +97,8 @@ export default function NewsPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {news.map((article) => (
-              <Card key={article.id} className="border-purple-200 hover:shadow-lg transition-shadow">
-                <div className="aspect-video bg-gradient-to-br from-purple-100 to-purple-200 rounded-t-lg">
+              <Card key={article.id} className="border-gray-200 hover:shadow-lg transition-shadow bg-white">
+                <div className="aspect-video bg-gray-100 rounded-t-lg">
                   <img
                     src={article.image || "/placeholder.svg"}
                     alt={article.title}
@@ -107,19 +107,19 @@ export default function NewsPage() {
                 </div>
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between mb-3">
-                    <span className="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-semibold">
                       {article.category}
                     </span>
                     {article.type === "external" && <ExternalLink className="w-4 h-4 text-gray-400" />}
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">{article.title}</h3>
-                  <div className="flex items-center text-gray-600 mb-3">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-3 line-clamp-2">{article.title}</h3>
+                  <div className="flex items-center text-gray-500 mb-3">
                     <Calendar className="w-4 h-4 mr-2" />
                     <span className="text-sm">{article.date}</span>
                   </div>
-                  <p className="text-gray-700 text-sm mb-4 line-clamp-3">{article.excerpt}</p>
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">{article.excerpt}</p>
                   <Button
-                    className="w-full bg-purple-600 hover:bg-purple-700"
+                    className="w-full bg-gray-800 hover:bg-gray-900 text-white"
                     onClick={() => {
                       if (article.type === "external" && article.link) {
                         window.open(article.link, "_blank")
@@ -137,12 +137,12 @@ export default function NewsPage() {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-16 bg-purple-50">
+      <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
             {language === "en" ? "Stay Updated" : "保持更新"}
           </h2>
-          <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
             {language === "en"
               ? "Subscribe to our newsletter to receive the latest news and updates from SHE REWIRES."
               : "订阅我们的新闻通讯，接收她原力的最新新闻和更新。"}
@@ -151,9 +151,9 @@ export default function NewsPage() {
             <input
               type="email"
               placeholder={language === "en" ? "Enter your email" : "输入您的邮箱"}
-              className="flex-1 px-4 py-3 border border-purple-200 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="flex-1 px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white"
             />
-            <Button className="bg-purple-600 hover:bg-purple-700 px-8 py-3 rounded-full">
+            <Button className="bg-gray-800 hover:bg-gray-900 text-white px-8 py-3 rounded-full">
               {language === "en" ? "Subscribe" : "订阅"}
             </Button>
           </div>
