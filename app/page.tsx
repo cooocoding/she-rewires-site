@@ -56,6 +56,38 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Team Portrait CTA */}
+      <section className="py-12 bg-[#E6E6E6]">
+        <div className="container mx-auto px-4">
+          <Card className="max-w-4xl mx-auto bg-gradient-to-r from-[#DEC4FF]/50 to-[#8A55ED]/20 border-[#8A55ED]/20 overflow-hidden">
+            <CardContent className="p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="text-center md:text-left">
+                <span className="text-xs tracking-[0.15em] uppercase text-[#8A55ED] font-medium">
+                  {language === "en" ? "Singapore 2026" : "新加坡 2026"}
+                </span>
+                <h3 className="text-2xl md:text-3xl font-bold text-[#303030] mt-2 mb-3">
+                  {language === "en" ? "Meet Our Force Nodes" : "认识我们的力量节点"}
+                </h3>
+                <p className="text-[#303030]/70 max-w-md">
+                  {language === "en" 
+                    ? "14 co-builders united by value resonance. Explore the living map of connection."
+                    : "14位因价值共鸣而汇聚的共建者。探索这幅仍在生长的连接地图。"
+                  }
+                </p>
+              </div>
+              <Link href="/team-portrait">
+                <Button 
+                  size="lg"
+                  className="bg-[#8A55ED] hover:bg-[#8A55ED]/90 text-white px-6 py-3 rounded-full font-medium whitespace-nowrap"
+                >
+                  {language === "en" ? "Team Portrait" : "团队画像"} <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* Impact Statistics */}
       <section className="py-16 bg-[#DEC4FF]">
         <div className="container mx-auto px-4">

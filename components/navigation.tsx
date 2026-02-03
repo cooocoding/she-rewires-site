@@ -12,9 +12,18 @@ export function Navigation() {
   const [eventsOpen, setEventsOpen] = useState(false)
   const { language, setLanguage, t } = useLanguage()
 
+  const [aboutOpen, setAboutOpen] = useState(false)
+
   const navItems = [
-    { href: "/about", key: "nav.about" },
-    { href: "/team", key: "nav.team" },
+    {
+      href: "/about",
+      key: "nav.about",
+      hasDropdown: true,
+      dropdownItems: [
+        { href: "/about", label: language === "en" ? "About Us" : "关于我们" },
+        { href: "/team-portrait", label: language === "en" ? "Team Portrait 2026" : "2026团队画像" },
+      ],
+    },
     { href: "/actions", key: "nav.actions" },
     {
       href: "/events",
@@ -50,15 +59,15 @@ export function Navigation() {
                 <div
                   key={item.href}
                   className="relative"
-                  onMouseEnter={() => setEventsOpen(true)}
-                  onMouseLeave={() => setEventsOpen(false)}
+                  onMouseEnter={() => item.key === "nav.about" ? setAboutOpen(true) : setEventsOpen(true)}
+                  onMouseLeave={() => item.key === "nav.about" ? setAboutOpen(false) : setEventsOpen(false)}
                 >
                   <button className="flex items-center text-[#303030] hover:text-[#8A55ED] transition-colors font-medium">
                     {t(item.key)}
                     <ChevronDown className="ml-1 h-4 w-4" />
                   </button>
-                  {eventsOpen && (
-                    <div className="absolute top-full left-0 mt-1 bg-white rounded-lg shadow-lg border border-[#E6E6E6] py-2 min-w-[160px]">
+                  {((item.key === "nav.about" && aboutOpen) || (item.key === "nav.events" && eventsOpen)) && (
+                    <div className="absolute top-full left-0 mt-1 bg-white rounded-lg shadow-lg border border-[#E6E6E6] py-2 min-w-[180px]">
                       {item.dropdownItems?.map((dropItem) => (
                         <Link
                           key={dropItem.href}
