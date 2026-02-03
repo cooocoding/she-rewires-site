@@ -16,6 +16,7 @@ const translations = {
   en: {
     // Navigation
     "nav.about": "About Us",
+    "nav.team": "Team 2026",
     "nav.actions": "Our Actions",
     "nav.events": "Events",
     "nav.getInvolved": "Get Involved",
@@ -134,6 +135,7 @@ const translations = {
   zh: {
     // Navigation
     "nav.about": "关于我们",
+    "nav.team": "2026团队",
     "nav.actions": "我们的行动",
     "nav.events": "活动",
     "nav.getInvolved": "参与我们",

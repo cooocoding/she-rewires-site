@@ -14,6 +14,7 @@ export function Navigation() {
 
   const navItems = [
     { href: "/about", key: "nav.about" },
+    { href: "/team", key: "nav.team" },
     { href: "/actions", key: "nav.actions" },
     {
       href: "/events",
